@@ -1,0 +1,405 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family:  MICROSOFT JHENGHEI;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+h3{
+	font-size: 1.5rem;
+	font-weight: bold
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+overflow-y: hidden
+}
+body{
+	font-family: Trebuchet MS;
+	padding:0;
+	padding-top: 38px;
+	margin:0;
+}
+.main{
+	height: 100%;
+	width: 100%;
+	-moz-transition: all .1s linear;
+	-webkit-transition: all .1s linear;
+	transition: all .1s linear;
+}
+th{
+	font-weight: bold
+}
+/*選單展開樣式*/
+.main.active{
+	margin-left:200px;
+	-moz-transition: all .1s linear;
+	-webkit-transition: all .1s linear;
+	transition: all .1s linear;
+}
+/*選單關閉樣式*/
+.left-menu{
+	position: fixed;
+	margin-left: -200px;
+	width: 200px;
+	height: 100vh;
+	color: #fff;
+	z-index: 2;
+	overflow-y: auto;
+}
+.mid-main{
+	position: absolute;
+	padding: 20px
+}
+/*光暗開關*/
+h1,h2,h3,h4,h6,a,p,.dn_tt{
+	color: #343a40
+}
+
+.night h1,.night p,.night a,.night h5,.night h3,.night h2,.night.dn_tt{
+	color:#f8f9fa;
+}
+
+body.night,.sbg.night{
+	background:#343a40;
+	transition: 0.5s;
+}
+.bg.night
+{
+	background:#23272b;
+	transition: 0.5s;
+}
+
+.bg{
+	background:#f8f9fa;
+	transition: 0.5s;
+}
+
+.mode{
+	position: absolute;
+	top: 7px;
+	right:20px;
+	font-size: 1rem
+}
+.set{
+	position: relative;
+}
+
+.dn_toggle{
+    border: 2px solid gray;
+    height: 20px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.dn_toggle.active{
+	border:2px solid orange;
+}
+.dn_toggle:before{
+	content: '';
+	position:absolute;
+	top: 4px;
+    right: 24px;
+	width:12px;
+	height:12px;
+	background:gray;
+	border-radius:50%;
+	transition: 0.5s;
+}
+.dn_toggle.active:before
+{
+	position:absolute;
+	top: 4px;
+    right: 4px;
+	background:orange;
+}
+
+
+
+/*移動開關*/
+.lm_toggle{
+    border: 2px solid gray;
+    height: 20px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.lm_toggle.active{
+	border:2px solid orange;
+}
+.lm_toggle:before{
+	content: '';
+	position:absolute;
+	top: 4px;
+    right: 24px;
+	width:12px;
+	height:12px;
+	background:gray;
+	border-radius:50%;
+	transition: 0.5s;
+}
+.lm_toggle.active:before
+{
+	position:absolute;
+	top: 4px;
+    right: 4px;
+	background:orange;
+}
+
+#left,#right {
+  min-height: 200px;
+}
+.card-header.move,.nav-pills.move{
+	cursor: move;
+}
+
+/*badge*/
+.top_link{
+	position: relative;
+  }
+.top_link .badge{
+	position: absolute;
+	top:-10px;
+	right:-10px;
+
+	}
+/*背景icon*/
+.rb_icon{
+	max-width: 350px;
+	font-size: 20rem;
+	transform-origin:right bottom;
+	transform:rotate(-10deg);
+	color: #f8f9fa;
+}
+.rb_icon.night{
+	color: #23272b;
+}
+.rb_icons{
+	z-index: -1;
+}
+.set_icons{
+	position: relative;
+	overflow: hidden;
+}
+.set_icon{
+	font-size: 5rem;
+	position: absolute;
+	right:0px;
+	transform:rotate(-10deg);
+	color:rgba(255,255,255, .3);
+}
+/*left 物件*/
+.left_part{
+	position: relative;
+	height: 100vh;
+}
+.user{
+	position: absolute;
+	top:0;
+}
+.copy{
+	position: absolute;
+	bottom:50px;
+	width: 200px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+			 box-sizing: border-box;
+}
+.left_link{
+	position: absolute;
+	top: 70px;
+}
+.left_link>li{
+	width: 200px;
+	padding:10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+			 box-sizing: border-box;
+}
+
+.bg_h:hover{
+	background-color: #fff;
+}
+.bg_h.night:hover{
+	background-color: #343a40;
+}
+
+.bgs_h:hover{
+	background-color: #f8f9fa;
+}
+.bgs_h.night:hover{
+	background-color: #23272b;
+}
+/*left 次級選單*/
+.sec_menu{
+	position: relative;
+}
+.rotate {
+	-moz-transition: all .1s linear;
+	-webkit-transition: all .1s linear;
+	transition: all .1s linear;
+}
+.rotate.down {
+	-moz-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	transform:rotate(90deg);
+}
+.collapse-inner>li{
+	width: 180px;
+	padding: 20px 33px 10px 33px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+			 box-sizing: border-box;
+}
+
+/*tabs*/
+.nav-pills .nav-link{
+	border-radius: 2px;
+	transition: color .2s ease-out, box-shadow .2s;
+}
+.nav-pills .nav-link:hover{
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	
+}
+.nav-pills .nav-item {
+	margin: 0 5px;
+}
+.nav-pills.pills-dark .nav-link.active {
+	background-color: #6c757d!important;
+}
+
+/*caleder*/
+  .fc-unthemed td.fc-today {
+	background: #17a2b8;
+	color: #fff
+}
+/*備忘錄*/
+.todo{
+list-style: none;
+margin: 10px;
+cursor: move;
+}
+
+.finish,.remove{
+	margin-right: 10px;
+	cursor: pointer
+}
+.done{
+  background-color: rgba(133, 133, 133, 0.5);
+  text-decoration:line-through;
+}
+
+.addItem{
+	margin-left: 20px;
+}
+
+
+/*time*/
+table.table-bordered{
+    border:1px solid #f8f9fa;
+    margin-top:20px;
+  }
+table.table-bordered > thead > tr > th{
+    border:1px solid #f8f9fa;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid #f8f9fa;
+}
+
+
+@media (max-width: 767px) {
+	
+}
+
+/*登入頁*/
+.login_logo {
+	font-size: 2em
+}
+.login_body {
+	margin: 0;
+	padding: 0;
+	background-image: url("https://unsplash.it/1600/900?random");
+	background-position: center center;
+	-moz-background-size: cover;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+}
+
+.login_mask {
+	background-color: rgba(0, 0, 0, .7);
+	-moz-background-size: cover;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
+
+.login_main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+
+.login_group {
+	width: 600px;
+	height: 350px;
+}
+
+.card_img {
+	background-position: center center;
+	background-image: url(https://unsplash.it/1600/900?random);
+	background-size: cover;
+}
+
+@media (max-width: 768px) {
+	.login_logo {
+		font-size: 1.5em
+	}
+	.card_img {
+		display: none
+	}
+	.login_group {
+		width: 300px
+	}
+}
+
+.list-h{
+	height: 100vh;
+	max-height: 790px
+}
+.logout-btn{
+	padding:0px 0.75px
+}
