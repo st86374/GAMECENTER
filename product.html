@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="Shortcut Icon" type="image/x-icon" href="img/gamecenter_icon.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.css">
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>GAME CENTER</title>
+</head>
+
+<body class="contianer-fluid">
+    <header class="fixed-top animated slideInDown">
+        <nav class="bg navbar d-flex justify-content-start  py-0">
+            <a href="#" class="d-inline-block align-top" id="menu-toggle"><i class="fas fa-bars"></i></a>
+            <h1 class="navbar-brand font-weight-bold " style="font-size:1.5rem">
+                <a class=" ml-3" href="index.html">
+                    <span class="text-danger">G</span><span class="text-primary">A</span><span
+                        class="text-warning">M</span><span class="text-success">E</span> CENTER <i
+                        class="fas fa-gamepad"></i>
+                </a>
+            </h1>
+            <div class="mode d-flex">
+                <ul class="d-flex">
+                    <li class="dropdown"><a href="#" class="top_link ml-3" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class=" top_link fas fa-cog" style="font-size: 1.3rem"></i></a>
+                        <div class="dropdown-menu  dropdown-menu-right bg overflow-auto"
+                            aria-labelledby="dropdownMenuButton">
+                            <ul>
+                                <li class="m-1 d-flex justify-content-between set">
+                                    <p class="font-weight-bold">Day / Night</p>
+                                    <div class="dn_toggle"></div>
+                                </li>
+                                                                <!--<li class="m-1 d-flex justify-content-between set">
+                                    <p class="font-weight-bold">Lock / Move</p>
+                                    <div class="lm_toggle"></div>
+                                </li>-->
+                                <li class="m-1 d-flex justify-content-between set">
+                                        <p class="font-weight-bold">LogOut</p>
+                                        <a href="login.html" class="btn btn-secondary btn-sm rounded-pill px-3 py-0"><i
+                                                class="fas fa-sign-out-alt"></i></a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#" class="top_link ml-3" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class=" top_link fas fa-bell fa-fw" style="font-size: 1.3rem"></i><span
+                                class="badge badge-danger badge-pill">9+</span></a>
+                        <div class="dropdown-menu  dropdown-menu-right bg overflow-auto"
+                            aria-labelledby="dropdownMenuButton" style="height: 300px">
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product3.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">BBB到貨通知<span
+                                                class="badge badge-secondary ml-2">1min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product4.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">CCC已售完,要補貨嗎？<span
+                                                class="badge badge-secondary ml-2">6min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product4.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小華對CCC下單<span
+                                                class="badge badge-secondary ml-2">15min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product5.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小鬼對EEE給予評價<span
+                                                class="badge badge-secondary ml-2">39min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product6.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小可對PPP提出疑問<span
+                                                class="badge badge-secondary ml-2">51min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product7.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小歐對KKK給予評價<span
+                                                class="badge badge-secondary ml-2">1hr</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product8.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小玉對SSS一個讚<span
+                                                class="badge badge-secondary ml-2">1hr</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product1.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小明對XXX給予評價<span
+                                                class="badge badge-secondary ml-2">2hr</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">tnibh
+                                            libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product2.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小白對AAA提出問題<span
+                                                class="badge badge-secondary ml-2">2hr</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary text-center">所有通知</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#" class="top_link ml-3" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class=" top_link fas fa-envelope" style="font-size: 1.3rem"></i><span
+                                class="badge badge-danger badge-pill">5</span></a>
+                        <div class="dropdown-menu  dropdown-menu-right bg overflow-auto"
+                            aria-labelledby="dropdownMenuButton" style="height:300px">
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Merry<span
+                                                class="badge badge-secondary ml-2">15min</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravida
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/men/89.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Tommy<span
+                                                class="badge badge-secondary ml-2">20min</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">us
+                                            odio,Cras sit amet
+                                            nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicit
+                                            vestibulum in vulputate
+                                            at
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/women/50.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Gina<span
+                                                class="badge badge-secondary ml-2">49min</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">
+                                            sollicitudin. Cras purus
+                                            odio,
+                                            vestibulum in vulputate at, tempus viverra turpis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/women/54.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Rita<span
+                                                class="badge badge-secondary ml-2">1hr</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">rpis.
+                                            Fusce condimentum
+                                            nunc
+                                            ac nisi vulputate
+                                            fringilla. Donec lacinia congue felis in faucibus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/men/39.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Bruce<span
+                                                class="badge badge-secondary ml-2">2hr</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">udin.
+                                            Cras purus odio,
+                                            vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+                                            nisi vulputate
+                                            fringilla. Donec lacinia congue felis in faucibus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="main active">
+        <div class="left-menu animated slideInLeft bg">
+            <div class="left_part">
+                <h2 class="d-flex align-items-center user">
+                    <img src="img/Tom.jpg" alt="" class="rounded-circle border mx-3 my-1"
+                        style="height: 60px;width: 60px;">
+                    <p>TomTang</p>
+                </h2>
+                <ul class="left_link">
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-volume-up mr-3"></i>資訊管理</a></li>
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-cash-register mr-3"></i>帳款管理</a></li>
+                    <li class="bg_h"><a href="product.html" class=""><i class="fas fa-box mr-3"></i>商品管理</a></li>
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-pen-nib mr-3"></i>留言版</a></li>
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-envelope mr-3"></i>客服信箱</a></li>
+                    <li class="bg_h"><a href="chart.html" class=""><i class="fas fa-chart-pie mr-3"></i>圖表分析</a></li>
+                    <li class="bg_h sec_menu">
+                        <a href="" class="rotate_toggle" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseTwo"><i class="fas fa-cog mr-3"></i>網站設定<span
+                                class="fa fa-chevron-right rotate ml-5"></span></a>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionSidebar">
+                            <ul class="collapse-inner rounded bg">
+                                <li class="bg_h"><a class="" href="">基本設定</a></li>
+                                <li class="bg_h"><a class="" href="">權限設定</a></li>
+                                <li class="bg_h"><a class="" href="">會員管理</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-user mr-3"></i>班別管理</a></li>
+
+                </ul>
+                <div class="text-center copy">
+                    <hr>
+                    <p>©Copyright 2019.<br>TangYuCheng</p>
+                </div>
+            </div>
+        </div>
+        <div class="mid-main ">
+            <div class="container-fluid">
+                <h3><i class="fas fa-box mr-3"></i>商品管理</h3>
+                <hr>
+                <div class="row list-block sortable ui-sortable-disabled" id="right">
+                    <div class="col-md-4 my-2">
+                        <div class="card my-2 border-secondary">
+                            <div class="card-header bg d-flex">
+                                <p class="mr-auto d-flex align-items-center">商品分類</p>
+                                <div class="">
+                                    <button type="button" class="btn btn-secondary" id="npbtn">新增</button>
+                                    <button type="button" class="btn btn-secondary" id="debtn">刪除</button>
+                                    <button type="button" class="btn btn-secondary" id="arbtn">排序</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body sbg list-h">
+                                <ul class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <li class="bgs_h p-2"><a class="nav-link active" id="v-pills-home-tab"
+                                            data-toggle="pill" href="#v-pills-home" role="tab"
+                                            aria-controls="v-pills-home" aria-selected="true">Class AAA</a></li>
+                                    <li class="bgs_h p-2"><a class="nav-link" id="v-pills-profile-tab"
+                                            data-toggle="pill" href="#v-pills-profile" role="tab"
+                                            aria-controls="v-pills-profile" aria-selected="false">Class BBB</a></li>
+                                    <li class="bgs_h p-2"><a class="nav-link" id="v-pills-messages-tab"
+                                            data-toggle="pill" href="#v-pills-messages" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Class CCC</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 my-2">
+                        <div class="card my-2 border-secondary">
+                            <div class="card-header bg d-flex">
+                                <p class="mr-auto d-flex align-items-center">產品列表</p>
+                                <div class="" id="accordionExample">
+                                    <button type="button" class="btn btn-secondary" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">新增</button>
+                                    <button type="button" class="btn btn-secondary">刪除</button>
+                                    <button type="button" class="btn btn-secondary">排序</button>
+                                </div>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card">
+                                    <div class="card-header bg">
+                                        <p class="text-center font-weight-bold">新增產品</p>
+                                    </div>
+                                    <div class="card-body sbg">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="form-row">
+                                                <div class="col-md-2 mb-3">
+                                                    <label for="validationTooltip02">
+                                                        <p>產品分類</p>
+                                                    </label>
+                                                    <select class="custom-select mb-3" id="validationTooltip02">
+                                                        <option value="1">ClassAAA</option>
+                                                        <option value="2">ClassBBB</option>
+                                                        <option value="3">ClassCCC</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="validationTooltip03">
+                                                        <p>產品名稱</p>
+                                                    </label>
+                                                    <input type="text" class="form-control" id="validationTooltip03"
+                                                        placeholder="請輸入產品名稱" required>
+                                                    <div class="invalid-tooltip">
+                                                        請輸入產品名稱
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 mb-3">
+                                                    <label for="validationTooltip04">
+                                                        <p>貨號</p>
+                                                    </label>
+                                                    <input type="text" class="form-control" id="validationTooltip04"
+                                                        placeholder="請輸入貨號" required>
+                                                    <div class="invalid-tooltip">
+                                                        請輸入產品貨號
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 mb-3">
+                                                    <label for="validationTooltip05">
+                                                        <p>數量</p>
+                                                    </label>
+                                                    <input type="text" class="form-control" id="validationTooltip05"
+                                                        placeholder="999" required>
+                                                    <div class="invalid-tooltip">
+                                                        請輸入產品數量
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="validationTooltip06">
+                                                        <p>圖片上傳</p>
+                                                    </label>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input form-control"
+                                                            id="validationTooltip06">
+                                                        <label class="custom-file-label" for="customFile">Choose
+                                                            file</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 mb-3">
+                                                    <label for="validationTooltip07">
+                                                        <p>上架時間</p>
+                                                    </label>
+                                                    <input type="text" class="form-control" id="validationTooltip07"
+                                                        placeholder="dd/mm/yyyy" required>
+                                                    <div class="invalid-tooltip">
+                                                        請輸入上架時間
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 mb-3">
+                                                    <label for="validationTooltip08">
+                                                        <p>下架時間</p>
+                                                    </label>
+                                                    <input type="text" class="form-control" id="validationTooltip08"
+                                                        placeholder="dd/mm/yyyy">
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="validationTooltip09">
+                                                        <p>優惠</p>
+                                                    </label>
+                                                    <div class="row pl-3">
+                                                        <div class="col-md-6 custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customCheck1">
+                                                            <label class="custom-control-label"
+                                                                for="customCheck1"><p>滿額免運</p></label> 
+                                                        </div>
+                                                        <div class="col-md-6 custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customCheck2">
+                                                            <label class="custom-control-label"
+                                                                for="customCheck2"><p>AAA折扣季</p></label>
+                                                        </div>
+                                                        <div class="col-md-6 custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customCheck3">
+                                                            <label class="custom-control-label"
+                                                                for="customCheck3"><p>XXX系列商品滿額折扣</p></label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <textarea name="editorDemo">
+                                                <p>(產品描述)</P>
+                                              </textarea>
+                                            <div class="text-center mt-3">
+                                                <button class="btn btn-secondary px-auto" type="submit">完成</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body sbg">
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                        aria-labelledby="v-pills-home-tab">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col-auto" width="100">選取</th>
+                                                    <th scope="col-auto" width="250">商品貨號</th>
+                                                    <th scope="col-auto" width="600">商品名稱</th>
+                                                    <th scope="col-auto" width="250">庫存數量</th>
+                                                    <th scope="col-auto" width="250">銷貨數量</th>
+                                                    <th scope="col-auto" width="100">操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>A-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product1.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex justify-content-center">
+                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                <label class="btn btn-secondary active">
+                                                    <input type="radio" name="options" id="option1" autocomplete="off"
+                                                        checked> <i class="fas fa-caret-left"></i>
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">1
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">2
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">3
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option3" autocomplete="off">
+                                                    <i class="fas fa-caret-right"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                        aria-labelledby="v-pills-profile-tab">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                        <th scope="col-auto" width="100">選取</th>
+                                                        <th scope="col-auto" width="250">商品貨號</th>
+                                                        <th scope="col-auto" width="600">商品名稱</th>
+                                                        <th scope="col-auto" width="250">庫存數量</th>
+                                                        <th scope="col-auto" width="250">銷貨數量</th>
+                                                        <th scope="col-auto" width="100">操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>B-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product2.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex justify-content-center">
+                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                <label class="btn btn-secondary active">
+                                                    <input type="radio" name="options" id="option1" autocomplete="off"
+                                                        checked> <i class="fas fa-caret-left"></i>
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">1
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">2
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">3
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option3" autocomplete="off">
+                                                    <i class="fas fa-caret-right"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                        aria-labelledby="v-pills-messages-tab">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                        <th scope="col-auto" width="100">選取</th>
+                                                        <th scope="col-auto" width="250">商品貨號</th>
+                                                        <th scope="col-auto" width="600">商品名稱</th>
+                                                        <th scope="col-auto" width="250">庫存數量</th>
+                                                        <th scope="col-auto" width="250">銷貨數量</th>
+                                                        <th scope="col-auto" width="100">操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"> <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"></th>
+                                                    <td>C-002</td>
+                                                    <td><a href="#" class="d-flex align-items-start"><img
+                                                                src="img/product3.jpeg" class="mr-3" alt="..."
+                                                                style="height: 40px;width:40px">WWWWWWWWW產品</a></td>
+                                                    <td>30</td>
+                                                    <td>28</td>
+                                                    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex justify-content-center">
+                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                <label class="btn btn-secondary active">
+                                                    <input type="radio" name="options" id="option1" autocomplete="off"
+                                                        checked> <i class="fas fa-caret-left"></i>
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">1
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">2
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">3
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option3" autocomplete="off">
+                                                    <i class="fas fa-caret-right"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end fixed-bottom rb_icons">
+            <i class="fas fa-gamepad rb_icon"></i>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="ano nymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://fullcalendar.io/js/fullcalendar-3.6.2/fullcalendar.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.21/moment-timezone-with-data.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.js"></script>
+        <script src="https://cdn.ckeditor.com/4.6.0/standard/ckeditor.js"></script>
+        <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script src="js/animated.js"></script>
+        <script src="js/all.js"></script>
+</body>
+
+</html>

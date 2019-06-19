@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="Shortcut Icon" type="image/x-icon" href="img/gamecenter_icon.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>GAME CENTER</title>
+</head>
+
+<body class="contianer-fluid">
+    <header class="fixed-top animated slideInDown">
+        <nav class="bg navbar d-flex justify-content-start  py-0">
+            <a href="#" class="d-inline-block align-top" id="menu-toggle"><i class="fas fa-bars"></i></a>
+            <h1 class="navbar-brand font-weight-bold " style="font-size:1.5rem">
+                <a class=" ml-3" href="index.html">
+                    <span class="text-danger">G</span><span class="text-primary">A</span><span
+                        class="text-warning">M</span><span class="text-success">E</span> CENTER <i
+                        class="fas fa-gamepad"></i>
+                </a>
+            </h1>
+            <div class="mode d-flex">
+                <ul class="d-flex">
+                    <li class="dropdown"><a href="#" class="top_link ml-3" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class=" top_link fas fa-cog" style="font-size: 1.3rem"></i></a>
+                        <div class="dropdown-menu  dropdown-menu-right bg overflow-auto"
+                            aria-labelledby="dropdownMenuButton">
+                            <ul>
+                                <li class="m-1 d-flex justify-content-between set">
+                                    <p class="font-weight-bold">Day / Night</p>
+                                    <div class="dn_toggle"></div>
+                                </li>
+                                <li class="m-1 d-flex justify-content-between set">
+                                    <p class="font-weight-bold">Lock / Move</p>
+                                    <div class="lm_toggle"></div>
+                                </li>
+                                <li class="m-1 d-flex justify-content-between set">
+                                        <p class="font-weight-bold">LogOut</p>
+                                        <a href="login.html" class="btn btn-secondary btn-sm rounded-pill px-3 py-0"><i
+                                                class="fas fa-sign-out-alt"></i></a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#" class="top_link ml-3" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class=" top_link fas fa-bell fa-fw" style="font-size: 1.3rem"></i><span
+                                class="badge badge-danger badge-pill">9+</span></a>
+                        <div class="dropdown-menu  dropdown-menu-right bg overflow-auto"
+                            aria-labelledby="dropdownMenuButton" style="height: 300px">
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product3.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">BBB到貨通知<span
+                                                class="badge badge-secondary ml-2">1min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product4.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">CCC已售完,要補貨嗎？<span
+                                                class="badge badge-secondary ml-2">6min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product4.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小華對CCC下單<span
+                                                class="badge badge-secondary ml-2">15min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product5.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小鬼對EEE給予評價<span
+                                                class="badge badge-secondary ml-2">39min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product6.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小可對PPP提出疑問<span
+                                                class="badge badge-secondary ml-2">51min</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product7.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小歐對KKK給予評價<span
+                                                class="badge badge-secondary ml-2">1hr</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product8.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小玉對SSS一個讚<span
+                                                class="badge badge-secondary ml-2">1hr</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product1.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小明對XXX給予評價<span
+                                                class="badge badge-secondary ml-2">2hr</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">tnibh
+                                            libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="img/product2.jpeg" class="mr-3 rounded" alt="..."
+                                        style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px;">
+                                        <h5 class="mt-0 font-weight-bold">小白對AAA提出問題<span
+                                                class="badge badge-secondary ml-2">2hr</span>
+                                        </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravidaCras sit ametnibh libero, in gravida</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary text-center">所有通知</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#" class="top_link ml-3" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class=" top_link fas fa-envelope" style="font-size: 1.3rem"></i><span
+                                class="badge badge-danger badge-pill">5</span></a>
+                        <div class="dropdown-menu  dropdown-menu-right bg overflow-auto"
+                            aria-labelledby="dropdownMenuButton" style="height:300px">
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Merry<span
+                                                class="badge badge-secondary ml-2">15min</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">Cras
+                                            sit amet
+                                            nibh libero, in gravida
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/men/89.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Tommy<span
+                                                class="badge badge-secondary ml-2">20min</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">us
+                                            odio,Cras sit amet
+                                            nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicit
+                                            vestibulum in vulputate
+                                            at
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/women/50.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Gina<span
+                                                class="badge badge-secondary ml-2">49min</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">
+                                            sollicitudin. Cras purus
+                                            odio,
+                                            vestibulum in vulputate at, tempus viverra turpis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/women/54.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Rita<span
+                                                class="badge badge-secondary ml-2">1hr</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">rpis.
+                                            Fusce condimentum
+                                            nunc
+                                            ac nisi vulputate
+                                            fringilla. Donec lacinia congue felis in faucibus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg_h py-2 dropdown-item" href="#">
+                                <div class="media">
+                                    <img src="https://randomuser.me/api/portraits/men/39.jpg"
+                                        class="mr-3 rounded-circle" alt="..." style="height: 40px;width:40px">
+                                    <div class="media-body" style="width:300px">
+                                        <h5 class="mt-0 font-weight-bold">Bruce<span
+                                                class="badge badge-secondary ml-2">2hr</span> </h5>
+                                        <p style="text-overflow : ellipsis;white-space: nowrap;overflow: hidden;">udin.
+                                            Cras purus odio,
+                                            vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+                                            nisi vulputate
+                                            fringilla. Donec lacinia congue felis in faucibus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="main active">
+        <div class="left-menu animated slideInLeft bg">
+            <div class="left_part">
+                <h2 class="d-flex align-items-center user">
+                    <img src="img/Tom.jpg" alt="" class="rounded-circle border mx-3 my-1"
+                        style="height: 60px;width: 60px;">
+                    <p>TomTang</p>
+                </h2>
+                <ul class="left_link">
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-volume-up mr-3"></i>資訊管理</a></li>
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-cash-register mr-3"></i>帳款管理</a></li>
+                    <li class="bg_h"><a href="product.html" class=""><i class="fas fa-box mr-3"></i>商品管理</a></li>
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-pen-nib mr-3"></i>留言版</a></li>
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-envelope mr-3"></i>客服信箱</a></li>
+                    <li class="bg_h"><a href="chart.html" class=""><i class="fas fa-chart-pie mr-3"></i>圖表分析</a></li>
+                    <li class="bg_h sec_menu">
+                        <a href="" class="rotate_toggle" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseTwo"><i class="fas fa-cog mr-3"></i>網站設定<span
+                                class="fa fa-chevron-right rotate ml-5"></span></a>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionSidebar">
+                            <ul class="collapse-inner rounded bg">
+                                <li class="bg_h"><a class="collapse-item" href="">基本設定</a></li>
+                                <li class="bg_h"><a class="collapse-item" href="">權限設定</a></li>
+                                <li class="bg_h"><a class="collapse-item" href="">會員管理</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bg_h"><a href="" class=""><i class="fas fa-user mr-3"></i>班別管理</a></li>
+                </ul>
+                <div class="text-center copy">
+                    <hr>
+                    <p>©Copyright 2019.<br>TangYuCheng</p>
+                </div>
+            </div>
+        </div>
+        <div class="mid-main">
+            <div class="container-fluid">
+                <h3><i class="fas fa-gamepad mr-3"></i>首頁</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row list-block sortable ui-sortable-disabled " id="left">
+                            <div class="col-md-4 my-2">
+                                <div class="card my-2 bg-primary text-white set_icons">
+                                    <div class="card-header">基本設定</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">網站功能相關設定</h5>
+                                        <a href="#" class="btn btn-outline-light btn-block">Go</a>
+                                    </div>
+                                    <i class="fas fa-cogs set_icon"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-4 my-2">
+                                <div class="card my-2 bg-success text-white set_icons">
+                                    <div class="card-header">權限管理</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">後臺帳號權限管理</h5>
+                                        <a href="#" class="btn btn-outline-light btn-block">Go</a>
+                                    </div>
+                                    <i class="fas fa-tools set_icon"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-4 my-2">
+                                <div class="card my-2 bg-danger text-white set_icons">
+                                    <div class="card-header">
+                                        會員管理
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">會員管理與設定</h5>
+                                        <a href="#" class="btn btn-outline-light btn-block">Go</a>
+                                    </div>
+                                    <i class="fas fa-users set_icon"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-12 my-2">
+                                <div class="card my-2 border-secondary">
+                                    <div class="card-header bg">
+                                        <p>內部公告</p>
+                                    </div>
+                                    <div class="card-body sbg">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">發布日期</th>
+                                                    <th scope="col">標題</th>
+                                                    <th scope="col">發文單位</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">2019/06/10</th>
+                                                    <td>Mark升任總理通知</td>
+                                                    <td>人資部</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2019/06/07</th>
+                                                    <td>年中業績考核會議排程</td>
+                                                    <td>行政部</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2019/06/05</th>
+                                                    <td>系統軟體設定使用辦法</td>
+                                                    <td>系統部</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2019/06/03</th>
+                                                    <td>產品發表會議</td>
+                                                    <td>研發部</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2019/06/03</th>
+                                                    <td>年度旅遊激勵辦法</td>
+                                                    <td>秘書室</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2019/06/02</th>
+                                                    <td>商品推廣文宣注意事項</td>
+                                                    <td>法務部</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2019/06/2</th>
+                                                    <td>系統軟體設定使用辦法</td>
+                                                    <td>系統部</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2019/06/1</th>
+                                                    <td>系統軟體設定使用辦法</td>
+                                                    <td>系統部</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex justify-content-center">
+                                            <button type="button" class="btn btn-secondary text-center">所有公告</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 my-2">
+                                <div class="border border-secondary p-3 rounded my-2" style="">
+                                    <ul class="nav nav-pills pills-dark mb-3 border-secondary" id="pills-tab"
+                                        role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active bg" id="pills-home-tab" data-toggle="pill"
+                                                href="#pills-home" role="tab" aria-controls="pills-home"
+                                                aria-selected="true">最新修改資訊</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link bg" id="pills-profile-tab" data-toggle="pill"
+                                                href="#pills-profile" role="tab" aria-controls="pills-profile"
+                                                aria-selected="false">最新加入會員</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link bg" id="pills-contact-tab" data-toggle="pill"
+                                                href="#pills-contact" role="tab" aria-controls="pills-contact"
+                                                aria-selected="false">最新登入日誌</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                            aria-labelledby="pills-home-tab">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col-auto" width="100">#</th>
+                                                        <th scope="col-auto" width="1000">資訊名稱</th>
+                                                        <th scope="col-auto" width="300">修改日期</th>
+                                                        <th scope="col-auto" width="200">IP位址</th>
+                                                        <th scope="col-auto" width="100">操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>XXX系列商品折扣開始</td>
+                                                        <td>2019-06-06 07:20</td>
+                                                        <td>255.192.88.3</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>AAA產品缺貨通知</td>
+                                                        <td>2019-06-05 08:50</td>
+                                                        <td>255.192.88.3</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>CCC商品預購開跑</td>
+                                                        <td>2019-06-05 07:20</td>
+                                                        <td>255.192.88.3</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>即日起至6/10日BBB商品買一送一</td>
+                                                        <td>2019-06-04 11:20</td>
+                                                        <td>255.192.88.3</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>慶祝端午節，滿499即可免運</td>
+                                                        <td>2019-06-04 09:15</td>
+                                                        <td>255.192.88.3</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">6</th>
+                                                        <td>DDD系列商品折扣開始</td>
+                                                        <td>2019-06-04 09:00</td>
+                                                        <td>255.192.88.3</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">7</th>
+                                                        <td>PPP系列商品販售情報</td>
+                                                        <td>2019-06-03 17:20</td>
+                                                        <td>255.192.88.3</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">8</th>
+                                                        <td>AAA商品上架</td>
+                                                        <td>2019-06-03 16:30</td>
+                                                        <td>255.192.88.3</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">9</th>
+                                                        <td>KKK系列商品折扣開始</td>
+                                                        <td>2019-06-03 15:20</td>
+                                                        <td>255.192.88.3</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="d-flex justify-content-center">
+                                                <button type="button"
+                                                    class="btn btn-secondary text-center">所有紀錄</button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                            aria-labelledby="pills-profile-tab">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col-auto" width="100">會員編號</th>
+                                                        <th scope="col-auto" width="300">會員名稱</th>
+                                                        <th scope="col-auto" width="500">會員信箱</th>
+                                                        <th scope="col-auto" width="300">加入日期</th>
+                                                        <th scope="col-auto" width="100">操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">G0009</th>
+                                                        <td>小白</td>
+                                                        <td>q1111111@mail.com.tw</td>
+                                                        <td>2019-06-06 07:20</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">G0008</th>
+                                                        <td>小黃</td>
+                                                        <td>y2222222@mail.com.tw</td>
+                                                        <td>2019-06-05 08:50</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">G0007</th>
+                                                        <td>小黑</td>
+                                                        <td>z33333333@mail.com.tw</td>
+                                                        <td>2019-06-05 07:20</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">G0006</th>
+                                                        <td>飛飛</td>
+                                                        <td>k4444444@mail.com.tw</td>
+                                                        <td>2019-06-04 11:20</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">G0005</th>
+                                                        <td>煞氣a小玉</td>
+                                                        <td>w5555555@mail.com.tw</td>
+                                                        <td>2019-06-04 09:15</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">G0004</th>
+                                                        <td>小鬼</td>
+                                                        <td>s66666666@mail.com.tw</td>
+                                                        <td>2019-06-04 09:00</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">G0003</th>
+                                                        <td>小蘭</td>
+                                                        <td>a77777777@mail.com.tw</td>
+                                                        <td>2019-06-03 17:20</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">G0002</th>
+                                                        <td>小一</td>
+                                                        <td>n88888888@mail.com.tw</td>
+                                                        <td>2019-06-03 16:30</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">G0001</th>
+                                                        <td>阿豪</td>
+                                                        <td>u99999999@mail.com.tw</td>
+                                                        <td>2019-06-03 15:20</td>
+                                                        <td class="text-center"><a href="#"><i
+                                                                    class="fas fa-edit"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="d-flex justify-content-center">
+                                                <button type="button"
+                                                    class="btn btn-secondary text-center">所有紀錄</button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                            aria-labelledby="pills-contact-tab">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col-auto" width="100">員工編號</th>
+                                                        <th scope="col-auto" width="300">員工名稱</th>
+                                                        <th scope="col-auto" width="500">操作內容</th>
+                                                        <th scope="col-auto" width="300">操作日期</th>
+                                                        <th scope="col-auto" width="100">IP位址</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">GS008</th>
+                                                        <td>Merry</td>
+                                                        <td>新增公告</td>
+                                                        <td>2019-06-06 07:20</td>
+                                                        <td>255.192.88.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GS003</th>
+                                                        <td>Bruce</td>
+                                                        <td>修改公告</td>
+                                                        <td>2019-06-05 08:50</td>
+                                                        <td>255.192.88.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GS007</th>
+                                                        <td>Tom</td>
+                                                        <td>確認款項</td>
+                                                        <td>2019-06-05 07:20</td>
+                                                        <td>255.192.88.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GS006</th>
+                                                        <td>Penny</td>
+                                                        <td>貨品上架</td>
+                                                        <td>2019-06-04 11:20</td>
+                                                        <td>255.192.88.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GS005</th>
+                                                        <td>Sara</td>
+                                                        <td>新增公告</td>
+                                                        <td>2019-06-04 09:15</td>
+                                                        <td>255.192.88.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GS004</th>
+                                                        <td>Jerry</td>
+                                                        <td>新增公告</td>
+                                                        <td>2019-06-04 09:00</td>
+                                                        <td>255.192.88.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GS011</th>
+                                                        <td>Jay</td>
+                                                        <td>刪除公告</td>
+                                                        <td>2019-06-03 17:20</td>
+                                                        <td>255.192.88.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GS022</th>
+                                                        <td>Neil</td>
+                                                        <td>修改內容</td>
+                                                        <td>2019-06-03 16:30</td>
+                                                        <td>255.192.88.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GS012</th>
+                                                        <td>Ray</td>
+                                                        <td>網站設定</td>
+                                                        <td>2019-06-03 15:20</td>
+                                                        <td>255.192.88.3</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="d-flex justify-content-center">
+                                                <button type="button"
+                                                    class="btn btn-secondary text-center">所有紀錄</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row list-block sortable ui-sortable-disabled" id="right">
+                            <div class="col-md-12 my-2">
+                                <div class="card my-2 border-secondary">
+                                    <div class="card-header bg">
+                                        <p>行事曆</p>
+                                    </div>
+                                    <div class="card-body sbg">
+                                        <h5 class="card-title"></h5>
+                                        <div id="calendar"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 my-2">
+                                <div class="card my-2 bg-warning set_icons">
+                                    <div class="card-header">
+                                        您有<span id='dolist'></span>件待辦事項
+                                    </div>
+                                    <div class="card-body">
+                                        <div class='addTask row card-title'>
+                                            <a class='addItem'>新增項目<i class='fa fa-plus-square'></i></a>
+                                            <div id='input'>
+                                                <input id='item' placeholder='輸入事項'>
+                                                <a class='add'><i class="fa fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                        <div id='todoList'>
+                                            <ul id='list'>
+                                                <li class="todo">
+                                                    <a class='remove'><i class='fa fa-trash'></i></a>
+                                                    <a class='finish'><i class='fa fa-thumbs-up'></i></a>
+                                                    10:00開會
+                                                </li>
+                                                <li class="todo">
+                                                    <a class='remove'><i class='fa fa-trash'></i></a>
+                                                    <a class='finish'><i class='fa fa-thumbs-up'></i></a>
+                                                    11:00回覆客戶
+                                                </li>
+                                                <li class="todo ">
+                                                    <a class='remove'><i class='fa fa-trash'></i></a>
+                                                    <a class='finish'><i class='fa fa-thumbs-up'></i></a>
+                                                    15:00準備業績報表
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-clipboard-list set_icon"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-12 my-2">
+                                <div class="card my-2 bg-info text-white set_icons">
+                                    <div class="card-header">各分部時區</div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered bg-info text-light"
+                                            style="border-color:#f8f9fa">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Location</th>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr style="background: rgba(0, 0, 0, 0.3)">
+                                                    <td scope="row">Taiwan</td>
+                                                    <td id=ce001_1></td>
+                                                    <td id=ce001_2></td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">NewYork</td>
+                                                    <td id=ce002_1></td>
+                                                    <td id=ce002_2></td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">Tokyo</td>
+                                                    <td id=ce003_1></td>
+                                                    <td id=ce003_2></td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">Thailand</td>
+                                                    <td id=ce004_1>Jacob</td>
+                                                    <td id=ce004_2>Thornton</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">Paris</td>
+                                                    <td id=ce005_1>Jacob</td>
+                                                    <td id=ce005_2>Thornton</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <i class="fas fa-clock set_icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end fixed-bottom rb_icons">
+            <i class="fas fa-gamepad rb_icon"></i>
+        </div>
+        <script>$('#calendar').fullCalendar({
+                editable: true,
+                events: [{
+                  title: 'AAA發售日',
+                  start: moment().subtract(1, 'days').format('YYYY-MM-DD'),
+                  color: '#6c757d',
+                  textColor: '#fff'
+              
+                }, {
+                  title: '賣場免運促銷',
+                  start: moment().add(7, 'days').format('YYYY-MM-DD'),
+                  end: moment().add(14, 'days').format('YYYY-MM-DD'),
+                  color: '#fd7e14',
+                  textColor: '#fff'
+                }, {
+                  title: 'BBB期間限定',
+                  start: moment().add(2, 'days').format('YYYY-MM-DD'),
+                  end: moment().add(5, 'days').format('YYYY-MM-DD'),
+                  color: '#6c757d',
+                  textColor: '#fff'
+                }]
+              });</script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="ano nymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.21/moment-timezone-with-data.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.js"></script>
+            <script src="https://fullcalendar.io/js/fullcalendar-3.6.2/fullcalendar.js"></script>
+        <script src="js/animated.js"></script>
+        <script src="js/index.js"></script>
+</body>
+
+</html>
